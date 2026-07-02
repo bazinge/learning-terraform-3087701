@@ -3,15 +3,15 @@ data "aws_ami" "app_ami" {
 
   filter {
     name   = "name"
-    values = ["bitnami-tomcat-*-x86_64-hvm-ebs-nami"]
+    values = ["Windows_Server-2025-English-Core-EKS_Optimized-1.35-2026.04.18"]
   }
 
   filter {
     name   = "virtualization-type"
-    values = ["hvm"]
+    values = ["machine"]
   }
 
-  owners = ["979382823631"] # Bitnami
+  owners = ["687402702948"] # Bitnami
 }
 
 resource "aws_instance" "web" {
